@@ -1,0 +1,38 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "BigQuery",
+	"patterns": [
+		{
+			"begin": "(LANGUAGE)\\s+(js)\\s+(AS)\\s+(\"\"\")",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword"
+				},
+				"2": {
+					"name": "variable"
+				},
+				"3": {
+					"name": "keyword"
+				},
+				"4": {
+					"name": "string.quoted.triple"
+				}
+			},
+			"end": "\"\"\"",
+			"endCaptures": {
+				"0": {
+					"name": "string.quoted.triple"
+				}
+			},
+			"patterns": [
+				{
+					"include": "source.js"
+				}
+			]
+		},
+		{
+			"include": "source.sql"
+		}
+	],
+	"scopeName": "source.bigquery"
+}

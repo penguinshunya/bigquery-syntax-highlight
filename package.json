@@ -1,0 +1,25 @@
+{
+    "name": "bigquery-syntax-highlight",
+    "displayName": "BigQuery Syntax Highlight",
+    "description": "BigQuery Syntax Highlight",
+    "version": "0.0.1",
+    "publisher": "penguinshunya",
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "bigquery",
+            "aliases": ["BigQuery", "bigquery"],
+            "extensions": [".bq",".bigquery"]
+        }],
+        "grammars": [{
+            "language": "bigquery",
+            "scopeName": "source.bigquery",
+            "path": "./syntaxes/bigquery.tmLanguage.json"
+        }]
+    }
+}
