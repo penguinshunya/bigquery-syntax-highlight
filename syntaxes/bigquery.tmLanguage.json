@@ -26,7 +26,14 @@
 			},
 			"patterns": [
 				{
-					"include": "source.js"
+					"name": "source.js",
+					"begin": "(?<=\"\"\")",
+					"end": "(?=\"\"\")",
+					"patterns": [
+						{
+							"include": "source.js"
+						}
+					]
 				}
 			]
 		},

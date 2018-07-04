@@ -2,7 +2,7 @@
     "name": "bigquery-syntax-highlight",
     "displayName": "BigQuery Syntax Highlight",
     "description": "BigQuery Syntax Highlight",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "penguinshunya",
     "engines": {
         "vscode": "^1.24.0"
@@ -18,12 +18,16 @@
         "languages": [{
             "id": "bigquery",
             "aliases": ["BigQuery", "bigquery"],
-            "extensions": [".bq",".bigquery"]
+            "extensions": [".bq",".bigquery"],
+            "configuration": "./language-configuration.json"
         }],
         "grammars": [{
             "language": "bigquery",
             "scopeName": "source.bigquery",
-            "path": "./syntaxes/bigquery.tmLanguage.json"
+            "path": "./syntaxes/bigquery.tmLanguage.json",
+            "embeddedLanguages": {
+                "source.js": "javascript"
+            }
         }]
     }
 }
